@@ -116,7 +116,7 @@ reload();
 		if($result->num_rows >0){
                   while($row = $result->fetch_assoc())
                   {
-                    echo "<tr>"."<td>". $num . "</td>"."<td>" . $row['logDate'] . "</td>" . "<td>".  $row["logType"] . "</td>" . "<td>" . $row["logClient"] ."</td>". "<td>" . htmlspecialchars($row["logContent"]) ."</td>"."<td>" . $row["logIp"] ."</td>". "<td>"  ."</td>" ."</tr>";
+                    echo "<tr>"."<td>". htmlspecialchars($num) . "</td>"."<td>" . htmlspecialchars($row['logDate']) . "</td>" . "<td>". htmlspecialchars($row["logType"]) . "</td>" . "<td>" . htmlspecialchars($row["logClient"]) ."</td>". "<td>" . htmlspecialchars($row["logContent"]) ."</td>"."<td>" . htmlspecialchars($row["logIp"]) ."</td>". "<td>"  ."</td>" ."</tr>";
                     $num++;
 
                   }
